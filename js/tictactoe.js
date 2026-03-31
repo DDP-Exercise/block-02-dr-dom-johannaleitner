@@ -65,4 +65,3 @@ const BATTLEFIELD =
 //     ];
 
 //TODO: Check if the battle is over, and if so, announce the winner!
-
