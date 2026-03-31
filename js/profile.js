@@ -15,6 +15,17 @@
  *******************************************************/
 
 //TODO: Place one object here.
+const SAVIOR = {
+    name: "Johanna",
+    age: 20,
+    location: "Lasberg",
+    hobbies: ["Reading", "History", "Theology", "Photography", "Sports"],
+    type_of_companion: "muzi katzi",
+    companion: {
+        name: "Sushi",
+        mood: "curious",
+    }
+}
 
 /*******************************************************
  *   DO NOT CHANGE THE CODE BELOW!

@@ -27,6 +27,8 @@ const BATTLEFIELD =
         [X, X, X],
         [O, O, X],
     ];
+// um andere zu testen diesen hier auskommentieren und einen anderen entkommentieren
+
 // const BATTLEFIELD =
 //     [
 //         [null, X, X],
@@ -64,7 +66,3 @@ const BATTLEFIELD =
 
 //TODO: Check if the battle is over, and if so, announce the winner!
 
-// Check Horizontal
-// Check Vertical
-// Check Main Diagonal
-// Check Anti Diagonal

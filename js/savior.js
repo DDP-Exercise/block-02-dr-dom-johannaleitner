@@ -20,40 +20,58 @@
  *
  *     Bratlsoft - 2026-03-15
  *******************************************************/
-
 /**
  * TODO 1:
  * First of all, we need to be able to read the text again,
  * without the risk of catching an eye infection!
- */
+ *
+ * Johanna's comments: Dr.DOM changed all <p> elements to pink on green
+ * /
 
+ //get all paragraph elements */
+ const paragraphs = document.getElementsByTagName("p");
 
-
+ // loop over them
+ for (const p of paragraphs) {
+ p.style.color = "";            // reset text color
+ p.style.backgroundColor = "";  // reset background color
+ }
 
 /**
  * TODO 2:
  * Great job! So much easier on the eyes! Now, let's tackle those minions!
  * Can't we just remove them all together?
+ *
+ * Johanna's comments: Dr.DOM inserted a new <ul> before our heroes list
  */
+// get original heroes list
+const heroesList = document.getElementById("heroes_of_the_web");
 
+// the minion list is right before it
+const minionList = heroesList.previousElementSibling;
 
-
+// remove minion list
+minionList.remove();
 
 /**
  * TODO 3:
  * Wow! You are so powerful! Quick now, set our heroes of the web free!
  * And while at it, let the world know again, that they are back in town!
  */
+// show heroes again
+heroesList.style.visibility = "visible";
 
-
+// restore introduction text
+const intro = document.getElementById("message").nextElementSibling;
+intro.textContent = "Let us introduce to you our list of Web-Heroes:";
 
 /**
  * TODO 4:
  * Our Webpage is safe again! But Dr. Dom is still holding our Headline as a hostage!
  * Do your thing, savior!
  */
-
-
+const title = document.getElementById("title");
+title.textContent = "We, the mighty Heroes of the web, will protect you!";
 
 /**
  * TODO 5:
@@ -63,3 +81,9 @@
  * It might sound paranoid. But I can't get rid of the feeling, that he is still here,
  * somewhere in the DOM. I can still feel his Code. Can you identify the source and remove it?
  */
+
+// select the dr.dom script directly
+const drDomScript = document.querySelector('script[src="js/dr.dom.js"]');
+
+// remove it
+drDomScript.remove();
